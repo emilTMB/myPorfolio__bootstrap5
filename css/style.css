@@ -1,0 +1,187 @@
+:root {
+    --color1: #05b1b1;
+    --color2: #52339a;
+}
+
+
+section {
+    padding: 100px 0;
+}
+
+header {
+    padding: 200px 0;
+}
+
+header,
+footer {
+    background: url(../img/pattern.png), var(--color1);
+    background: url(../img/pattern.png), -moz-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: url(../img/pattern.png), -webkit-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: url(../img/pattern.png), linear-gradient(to right, var(--color1) 0%, var(--color2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--color1), endColorstr=var(--color2), GradientType=1);
+    /* через url мы указываем изображение, которое будет на фоне, а градиент будет над ним */
+    background-size: contain;
+    /* background-size: contain; - требуется для того, чтобы картинка бекграунда была в пределах див */
+}
+body {
+    color: #cee6ff;
+    background-color: #000000;
+}
+.accordion {
+    color: #000000;
+}
+
+.keg_play {
+    background-color: var(--color1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* с помощью следующих трех строк мы сможем выравнивать содержимое нашего элемента внутри., по вертикали и горизонтали */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 30px auto 30px;
+    /* для того чтобы была плавная анимация при наведении делаем следующее*/
+    transition: all 0.2s ease;
+}
+
+.keg_play:hover {
+    background-color: var(--color2);
+}
+
+.keg_triangle {
+    margin-right: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent var(--bs-white);
+}
+
+.btn-keg {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    color: var(--bs-white);
+    background-color: var(--color2);
+}
+
+.btn-keg:hover {
+    color: var(--bs-white);
+    background-color: var(--color1);
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* О курсе */
+.shedule, .otzivi , .forwhom {
+    background: var(--color1);
+    background: -moz-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: -webkit-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: linear-gradient(to right, var(--color1) 0%, var(--color2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--color1), endColorstr=var(--color2), GradientType=1);
+    
+}
+.about i {
+    font-style: 25px;
+    color: var(--color2);
+}
+.keg_circle {
+    margin: 0 auto 15px;
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--color2);
+    border-radius: 50%;
+    /* чтобы выравнить по центру что угодно */
+    display: flex;
+    /* по горизонтали */
+    justify-content: center;
+    /* по вертикали */
+    align-items: center;
+}
+.line {
+    width: 100px;
+    height: 3px;
+    background-color: var(--color1);
+    margin: 15px auto 30px;
+}
+.outline {
+    background-color: var(--color1);
+    box-shadow: 0px 0px 8px 14px rgba(5, 177, 177, 0.21);
+    width: 100%;
+    height: 5px;
+    /* margin-bottom: 15px; */
+}
+/* Для кого курс */
+.forwhom h5 {
+    padding: 50px;
+    border: 3px solid var(--color1);
+}
+/* Программа курса */
+.accordion-button:not(.collapsed) {
+color: var(--bs-white);
+background-color: var(--color2);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+/* Процесс обучения */
+.learning h5 {
+    padding: 25px;
+    border: 3px solid var(--color1);
+}
+/* Об авторе */
+.autor {
+    padding-bottom: 0;
+}
+.keg_img {
+    min-width: 260px;
+}
+/* Отзывы */
+.keg_otzivi_img {
+    border: 3px solid var(--color1);
+    border-radius: 50% !important;
+    margin-bottom: 15px;
+}
+/* Делаем иконки в футере круглыми */
+footer .btn {
+border-radius: 100%;
+}
+footer {
+    padding: 25px 0;
+}
+/* Цвет */
+.color1 {
+    color: var(--color1);
+}
+.color2 {
+    color: var(--color2);
+}
+
+.bg1 {
+    background-color: var(--color1);
+    }
+.bg2 {
+    background-color: var(--color2);
+}
+@media screen and (max-width: 1200px) {
+    .author__img {
+        display: none;
+    }
+}
