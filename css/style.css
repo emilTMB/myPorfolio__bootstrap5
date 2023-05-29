@@ -26,6 +26,9 @@ body {
     color: #cee6ff;
     background-color: #000000;
 }
+h1 {
+margin-bottom: 50px;
+}
 .constacts__h3,a {
     color: #cee6ff;
     text-decoration: none;
