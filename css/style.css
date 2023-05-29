@@ -3,7 +3,6 @@
     --color2: #52339a;
 }
 
-
 section {
     padding: 100px 0;
 }
@@ -27,8 +26,16 @@ body {
     color: #cee6ff;
     background-color: #000000;
 }
+.constacts__h3,a {
+    color: #cee6ff;
+    text-decoration: none;
+}
 .accordion {
     color: #000000;
+}
+
+.white{
+    color: #e0efff;
 }
 
 .keg_play {
